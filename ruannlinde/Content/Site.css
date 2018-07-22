@@ -1,12 +1,14 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    background-image: none;
+    background-color: #222;
+    margin-bottom: 40px;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    margin-bottom: 40px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -28,9 +30,40 @@ textarea {
     padding-top: 20px;
 }
 
-@media only screen and (max-width: 767px) {
+.page-header {
+    border: none !important;
+}
+
+.navbar-header {
+    background-color: #222222 !important;
+}
+
+.header-image {
+    background-image: none
+}
+
+h1 {
+    color: royalblue;
+}
+
+.page-footer {
+    background-color: #222;
+    position: absolute;
+    bottom: 0;
+    line-height: 40px;
+    height: 40px;
+    width: 100%;
+}
+
+@media only screen and (min-width: 767px) {
     .nofloat {
         float: none;
         padding: 10px 15px;
     }
+
+    /*.header-image {
+        background-image: url('Images/banner.jpg');
+        min-height: 350px;
+        width: 100%;
+    }*/
 }

@@ -1,18 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Owin;
-using Owin;
+﻿using Microsoft.Owin;
 
-[assembly: OwinStartup(typeof(ruannlinde.Startup))]
+using RL;
 
-namespace ruannlinde
+[assembly: OwinStartup(typeof(Startup))]
+
+namespace RL
 {
+    using Owin;
+
     public partial class Startup
     {
         public void Configuration(IAppBuilder app)
         {
-            ConfigureAuth(app);
+            this.ConfigureAuth(app);
+            this.ConfigureNinject(app);
         }
     }
 }

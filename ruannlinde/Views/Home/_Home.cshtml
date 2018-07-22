@@ -1,32 +1,57 @@
-﻿<!-- ko with: home -->
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+﻿<div ng-controller="homeController" class="container container-fluid">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                @Html.ActionLink("Ruann Linde", "Index", "Home", new { area = string.Empty }, new { @class = "navbar-brand" })
+            </div>
+        </div>
+    </div>
+    <div class="title">
+        <h1 scrambler ng-scope="model.titles"></h1>
+
+        {{model}}
+    </div>
+    <section>
+        <div class="row">
+            <div class="col-12">
+                <div class="profile">
+                    <p>
+                        With more than 16 years’ experience in programming - within both enterprise and start up environment – I am proficient in most software development methodologies. I have proven expertise in developing and leading complex projects, and have excellent technical and communication skills. I am a proactive problem solver, self-motivated and highly driven.
+                    </p>
+                    <p>
+                        Most importantly. I love what I do.
+                    </p>
+                    <p>
+                        With my passion for continual personal and technical growth, I’m now looking for my next opportunity to apply my years of experience, leading a team towards the goal of enhancing and improving organisations by successfully completing new complex projects.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
 </div>
-<div class="row">
-    <div class="col-md-4">
-        <h2>Your information</h2>
-        <p>This section shows how you can call ASP.NET Web API to get the user details.</p>
-        <p data-bind="text: myHometown"></p>
-       
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=273732">Learn more &raquo;</a></p>
-    </div>
-
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET Single Page Application (SPA) helps you build applications that include significant client-side interactions using HTML, CSS, and JavaScript.
-            It's now easier than ever before to getting started writing highly interactive web applications.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=273732">Learn more &raquo;</a></p>
-    </div>
-
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
-
-<!-- /ko -->
+@*<div class="row">
+        <div class="col-xs-12">
+            <div id="avatar-carousel" class="carousel" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="~/Content/Images/avatar1.png">
+                    </div>
+                    <div class="item">
+                        <img src="~/Content/Images/avatar2.png">
+                    </div>
+                    <div class="item">
+                        <img src="~/Content/Images/avatar3.png">
+                    </div>
+                    <div class="item">
+                        <img src="~/Content/Images/avatar4.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@

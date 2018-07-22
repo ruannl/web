@@ -1,18 +1,20 @@
-﻿using System;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin;
-using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.DataProtection;
-using Microsoft.Owin.Security.Google;
-using Microsoft.Owin.Security.OAuth;
-using Owin;
-using ruannlinde.Models;
-using ruannlinde.Providers;
-
-namespace ruannlinde
+﻿namespace RL
 {
+    using System;
+
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.Owin;
+    using Microsoft.Owin;
+    using Microsoft.Owin.Security.Cookies;
+    using Microsoft.Owin.Security.Google;
+    using Microsoft.Owin.Security.OAuth;
+
+    using Owin;
+
+    using RL.Areas.Accounting.Providers;
+    using RL.Models;
+    using RL.Providers;
+
     public partial class Startup
     {
         // Enable the application to use OAuthAuthorization. You can then secure your Web APIs
@@ -42,6 +44,8 @@ namespace ruannlinde
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
             app.CreatePerOwinContext<ApplicationSignInManager>(ApplicationSignInManager.Create);
 
+            app.CreatePerOwinContext(AccountingContext.Create);
+
             // Enable the application to use a cookie to store information for the signed in user
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
@@ -56,6 +60,7 @@ namespace ruannlinde
                         regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
                 }
             });
+
             // Use a cookie to temporarily store information about a user logging in with a third party login provider
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
@@ -83,11 +88,11 @@ namespace ruannlinde
             //    appId: "",
             //    appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "291775119431-aumr3utpmsca8ng54186aj5ggkq36gu4.apps.googleusercontent.com" ,
+                ClientSecret = "ziCDWUq4qFRrzFwZAAavPIJF"
+            });
         }
     }
 }

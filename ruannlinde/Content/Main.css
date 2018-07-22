@@ -1,0 +1,92 @@
+﻿@-webkit-keyframes typing {
+  from {
+    width: 0; } }
+
+@-webkit-keyframes blink-caret {
+  50% {
+    border-color: transparent; } }
+
+html {
+  height: 100%;
+  margin: 0; }
+
+body {
+  display: block;
+  background-image: none;
+  background-color: #262626;
+  margin-bottom: 40px !important;
+  color: dodgerblue;
+  min-height: 100%; }
+
+header {
+  display: none;
+  height: 0; }
+
+.header-image {
+  background-image: none; }
+
+/*.page-footer {
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    line-height: calc($footer-height - 2);
+    background-color: $header-background-color !important;
+    color: $body-color !important;
+    height: $footer-height;
+}*/
+/* Set padding to keep content from hitting the edges */
+.body-content {
+  padding: 20px; }
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+  white-space: normal; }
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+  max-width: 280px; }
+
+.no-padding {
+  margin: 0 !important;
+  padding: 0 !important; }
+
+/* Set padding to display errors that occur during databinding */
+.padding-error {
+  padding-top: 20px; }
+
+/*h1 {
+    font-size: 40px !important;
+}
+
+.title {
+
+    h1 {
+        border-right: .1em solid $body-color;
+        width: 16.5em;
+        width: 21ch;
+        margin: 2em 1em;
+        white-space: nowrap;
+        overflow: hidden;
+        -webkit-animation: typing 3s steps(21, end), blink-caret .5s step-end infinite alternate;
+    }
+}*/
+.profile {
+  color: dodgerblue;
+  border: solid;
+  border-width: 1px;
+  border-color: dodgerblue;
+  box-shadow: -15px 15px 10px dodgerblue; }
+  .profile p {
+    padding: 10px;
+    text-align: justify; }
+
+.carousel {
+  width: 160px !important;
+  height: 160px !important;
+  float: right;
+  border: solid 2px dodgerblue !important;
+  margin-top: -25px; }

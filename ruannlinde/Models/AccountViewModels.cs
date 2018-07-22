@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-
-namespace ruannlinde.Models
+﻿namespace RL.Models
 {
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
     // Models returned by AccountController actions.
     public class ExternalLoginConfirmationViewModel
     {
